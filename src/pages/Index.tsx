@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import Icon from '@/components/ui/icon'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 export default function Index() {
   const [activeSection, setActiveSection] = useState('home')
@@ -96,9 +97,12 @@ export default function Index() {
                 </button>
               ))}
             </div>
-            <Button className="gradient-bg text-white">
-              Начать квест
-            </Button>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <Button className="gradient-bg text-white">
+                Начать квест
+              </Button>
+            </div>
           </div>
         </div>
       </nav>
